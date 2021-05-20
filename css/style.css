@@ -1,0 +1,319 @@
+html {
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  perspective: 1px; 
+  transform-style: preserve-3d;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: 'Amatic SC', cursive;
+  color: #fff;
+}
+header {
+  box-sizing: border-box;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 20%;
+  transform-style: inherit;
+  width: 100vw;
+}
+header::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: -1;
+  transform-origin: center;
+  min-height: 100vh;
+  background-image: url(../images/4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s;
+  /* Параллакс */
+  transform: translateZ(-1px) scale(2);
+}
+header h1 {
+  margin-top: -100px;
+  font-size: 42px;
+}
+
+.wrapper{
+	margin: 1% auto;
+	height: 700px;
+	width: 1000px;
+}
+
+.container{
+	position: relative;
+	width: 100%;
+}
+.square_1{
+	overflow: hidden;
+	box-sizing: padding-box;
+	position: absolute;
+	top: 1%;
+	left: 69%;
+	width: 200px;
+	height: 200px;
+	background-color: #f7c1cc;
+
+	transform: rotate(34deg);
+	-webkit-transform: rotate(34deg);
+	-moz-transform: rotate(34deg);
+	-ms-transform: rotate(34deg);
+	-o-transform: rotate(34deg);
+
+	border-radius: 64% 0 108% 0;
+	-webkit-border-radius: 64% 0 108% 0;
+	-moz-border-radius: 64% 0 108% 0;
+	-ms-border-radius: 64% 0 108% 0;
+	-o-border-radius: 64% 0 108% 0;
+
+	border: 2px solid #000000;
+	border-top: 10px solid #000000;
+	border-right: 8px solid #000000;
+
+	-webkit-box-shadow: 0px -2px 14px 10px rgba(34, 60, 80, 0.36) inset;
+	-moz-box-shadow: 0px -2px 14px 10px rgba(34, 60, 80, 0.36) inset;
+	box-shadow: 0px -2px 14px 10px rgba(34, 60, 80, 0.36) inset;
+
+	z-index: 5;
+}
+
+.square{
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	
+	height: 215px;
+    width: 215px;
+    position: absolute;
+    top: -9%;
+    left: -7%;
+	border-radius: 100%;
+	background: #fff;
+
+	-webkit-box-shadow: 0px -4px 8px 14px rgba(34, 60, 80, 0.2) inset;
+	-moz-box-shadow: 0px -4px 8px 14px rgba(34, 60, 80, 0.2) inset;
+	box-shadow: 0px -4px 8px 14px rgba(34, 60, 80, 0.2) inset;
+}
+
+.eyeball{
+	width: 67%;
+	height: 67%;
+	background: url(../images/eye-1.png) 39% 49% #fff no-repeat;
+    background-size: 114%;
+	position: absolute;
+	border-radius: 100%;
+	overflow: hidden;
+}
+#eyeball{
+	left: 14%;
+    top: 14%;
+}
+#eyeball2{
+	left: 19%;
+    top: 10%;
+}
+.square_2{
+	background-color: #f7c1cc;
+	overflow: hidden;
+	position: absolute;
+	top: 1%;
+	left: 12%;
+	width: 200px;
+	height: 200px;
+	transform: rotate(56deg);
+	-webkit-transform: rotate(56deg);
+	-moz-transform: rotate(56deg);
+	-ms-transform: rotate(56deg);
+	-o-transform: rotate(56deg);
+	border-radius: 64% 0 108% 0;
+	-webkit-border-radius: 64% 0 108% 0;
+	-moz-border-radius: 64% 0 108% 0;
+	-ms-border-radius: 64% 0 108% 0;
+	-o-border-radius: 64% 0 108% 0;
+	border: 2px solid #000000;
+	z-index: 5;
+
+	border-left: 10px solid #000000;
+	border-bottom: 8px solid #000000;
+
+	-webkit-box-shadow: 0px -2px 14px 10px rgba(34, 60, 80, 0.36) inset;
+	-moz-box-shadow: 0px -2px 14px 10px rgba(34, 60, 80, 0.36) inset;
+	box-shadow: 0px -2px 14px 10px rgba(34, 60, 80, 0.36) inset;
+}
+  
+.spiral{
+	width: 530px;
+    height: 530px;
+    background: url(../images/24.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -329px;
+    left: 248px;
+    z-index: 5; 
+
+	animation: spin 30s linear 0s infinite;
+
+	transform-origin: 50% 50%;
+	transition:all 0.3s ease 0s;
+	-moz-transition:all 0.3s ease 0s;
+	-ms-transition:all 0.3s ease 0s;
+	-o-transition:all 0.3s ease 0s;
+	-webkit-transition:all 0.3s ease 0s;
+
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(-360deg);}
+}
+
+
+.meteorite{
+	position: absolute;
+	top: -400px;
+	width: 307px;
+	height: 268px;
+	background: url(../images/25.png) no-repeat;
+	background-size: cover;		
+	transform: rotate(-4deg);
+}
+.meteorite1{
+	position: absolute;
+	top: -300px;
+	width: 307px;
+	height: 268px;
+	background: url(../images/26.png) no-repeat;
+	background-size: cover;		
+	transform: rotate(-4deg);
+}
+.star{
+	transform-origin: 50% 50%;
+	transform: scale(1);
+	-webkit-transform: scale(1) ;
+	-moz-transform: scale(1) ;
+	-ms-transform: scale(1) ;
+	-o-transform: scale(1) ;
+	transition:all 0.3s ease 0s;
+	-moz-transition:all 0.3s ease 0s;
+	-ms-transition:all 0.3s ease 0s;
+	-o-transition:all 0.3s ease 0s;
+	-webkit-transition:all 0.3s ease 0s;
+}
+.star1{
+	width: 123px;
+	height: 123px;
+	background: url(../images/31.png) no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 4%;
+	left: 1%;	
+}
+.star2{
+	width: 108px;
+    height: 105px;
+    background: url(../images/32.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 79%;
+    left: 16%;
+}
+.star3{
+	width: 102px;
+    height: 52px;
+    background: url(../images/33.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 33%;
+    left: 79%;
+}
+
+.star4{
+	width: 214px;
+    height: 97px;
+    background: url(../images/34.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 78%;
+    left: 53%;
+}
+
+.star5{
+	width: 133px;
+    height: 70px;
+    background: url(../images/35.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 56%;
+    left: 86%;
+}
+.star6{
+	width: 174px;
+    height: 153px;
+    background: url(../images/36.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 93%;
+    left: 86%;
+}
+
+.star7{
+	width: 174px;
+    height: 153px;
+    background: url(../images/36.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 10%;
+    left: 61%;
+}
+
+.star8{
+	width: 214px;
+    height: 97px;
+    background: url(../images/34.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 48%;
+    left: 38%;
+}
+
+.star9{
+	width: 164px;
+    height: 81px;
+    background: url(../images/34.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 1%;
+    left: 89%;
+}
+
+.star10{
+	width: 214px;
+    height: 97px;
+    background: url(../images/34.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 48%;
+    left: 0%;
+}
+
+.star_hide{
+	transform-origin: 50% 50%;
+	transform: scale(0);
+	-webkit-transform: scale(0) ;
+	-moz-transform: scale(0) ;
+	-ms-transform: scale(0) ;
+	-o-transform: scale(0) ;
+	transition:all 0.3s ease 0s;
+	-moz-transition:all 0.3s ease 0s;
+	-ms-transition:all 0.3s ease 0s;
+	-o-transition:all 0.3s ease 0s;
+	-webkit-transition:all 0.3s ease 0s;
+}
